@@ -81,9 +81,8 @@ Array.prototype.contains = function (item) {
 
 // Perform the given action on each element of the array.
 Array.prototype.each = function (action) {
-    for (var i = 0; i < this.length; i++) {
-        action(this[i]);
-    }
+	this.map(function(el){action(el);});
+	return this;
 };
 
 // Remove all occurrences of the given item from an array.
