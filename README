@@ -1,0 +1,8 @@
+A collection of array helpers for javascript added through prototypes
+---------------------------------------------------------------------
+
+It derived from my own collection as well as from this helpful gist:
+https://gist.github.com/578843
+
+If you do not want to include heavy libraries and these functoins fits your
+needs, it might be useful! Use with care to no override you own!
