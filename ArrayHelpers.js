@@ -2,14 +2,27 @@
  * Trim an array, a.k.a. discard empty values
  */
 Array.prototype.trim = function(){
-  // return this.filter(function(el){
-  return this.map(function(el){
-    return el.trim();
+	return this.filter(function(el){
+		if(el instanceof Array || el instanceof String){
+			return el.trim().length > 0;
+		}
+		else if (undefined === el || el === null)
+		{
+			return false;
+		}
+		else
+		{
+			return true;
+		}
   })
 }
 
+
+/**
+ * Check, if array only contains empty values
+ */
 Array.prototype.empty = function(){
-  return this.length!=this.trim().length;
+  return this.trim().length === 0;
 }
 
 /**
@@ -34,6 +47,7 @@ Array.prototype.FILL = function() {
 	return this;
 }
 
+
 /**
  * Return a unique array
  */
@@ -46,8 +60,7 @@ Array.prototype.unique = function(){
 }
 
 
-
-/*******
+/*****************************************************************************
  * Adding other prototypes from https://gist.github.com/578843
  */
 
