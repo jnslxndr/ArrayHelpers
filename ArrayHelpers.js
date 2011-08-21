@@ -39,7 +39,7 @@ Array.prototype.FILL = function() {
  */
 Array.prototype.unique = function(){
 	var new_array = [];
-	while (i < this.length) {
+	for (var i=0; i < this.length; i++) {
 		if(!new_array.contains(this[i])) new_array.push(this[i]);
 	}
 	return new_array;
