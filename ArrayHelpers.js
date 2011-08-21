@@ -4,6 +4,7 @@
 Array.prototype.trim = function(){
 	return this.filter(function(el){
 		if(el instanceof Array || el instanceof String){
+			if (el instanceof Array) el.trim();
 			return el.trim().length > 0;
 		}
 		else if (undefined === el || el === null)
